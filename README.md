@@ -11,7 +11,7 @@ Este proyecto tiene como objetivo utilizar Python y las librerías pandas y open
 
 ### Dependencias del proyecto
 
-El proyecto utiliza las siguientes librerías de Python:
+Librerías de Python:
 
 - `pandas`: librería utilizada para manipular y analizar datos en archivos de Excel.
 - `openpyxl`: librería utilizada para leer y escribir archivos de Excel.
