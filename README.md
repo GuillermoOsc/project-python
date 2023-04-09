@@ -1,4 +1,4 @@
-# Proyecto en Python para manipular y automatizar tareas en Excel
+## Proyecto en Python para manipular y automatizar tareas en Excel
 
 Este proyecto tiene como objetivo utilizar Python y las librerías pandas y openpyxl para manipular y automatizar tareas en archivos de Excel. A continuación, se presenta una descripción de los componentes del proyecto:
 
