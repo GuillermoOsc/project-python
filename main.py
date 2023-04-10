@@ -1,6 +1,8 @@
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.chart import BarChart, Reference
+from openpyxl.styles import Font
+import string
 
 archivo_excel = pd.read_excel('supermarket_sales.xlsx')
 
@@ -47,5 +49,21 @@ barchart.style = 2
 
 pestaña['B8'] = '=SUM(B6:B7)'  # Script para aplicar formula de excel.
 pestaña['B8'].style = 'Currency'
+
+abecedario = list(string.ascii_uppercase)
+abecedario_excel = abecedario[0: max_col]
+
+for i in abecedario_excel:
+    if i != 'A':
+        pestaña[f'{i}{max_fila+1}'] = f'=SUM({i}{min_fila+1}:{i}{max_fila})'
+        pestaña[f'{i}{max_fila+1}'].style = 'Currency'
+
+pestaña[f'{abecedario_excel[0]}{max_fila+1}'] = 'Total'
+
+pestaña['A1'] = 'Reporte'
+pestaña['A2'] = '2021'
+
+pestaña['A1'].font = Font('Arial', bold=True, size=20)
+pestaña['A2'].font = Font('Arial', bold=True, size=12)
 
 wb.save('sales_2021.xlsx')
