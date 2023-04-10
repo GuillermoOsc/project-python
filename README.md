@@ -18,5 +18,5 @@ Librerías de Python:
 
 Para instalar las dependencias, utilizar los siguientes comandos en la terminal:
 
-pip install pandas
-pip install openpyxl
+- pip install pandas
+- pip install openpyxl
